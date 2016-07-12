@@ -80,9 +80,4 @@ open source:
     installed may want to reuse the lists they have so the key has
     been included.
 
-<span id="_MailAutoSig" class="anchor"></span>Robert Ginsburg
 
-robert.ginsburg@balsamicsolutions.com
-
-![](media/image1.png){width="0.9888888888888889in"
-height="0.2111111111111111in"}
