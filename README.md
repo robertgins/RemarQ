@@ -1,4 +1,4 @@
-It’s safe to say that Microsoft SharePoint Server™ is one of the most
+It’s safe to say that Microsoft SharePoint Server™ is one of the more
 widely deployed technologies for document management and business
 collaboration. *RemarQ* ™ is an enhancement to SharePoint that provides
 visual tracking for what you (as a SharePoint user) do on a SharePoint
