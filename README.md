@@ -23,9 +23,9 @@ available. The versions for SharePoint 2007 and 2010 were provided as
 open source CodePlex projects (<http://readunreadcolumn.codeplex.com/> &
 <http://voodoo.codeplex.com/> ). In 2013 I decided that it might be
 economically worthwhile to turn the technology into a licensed product
-and sell it. For a great number of reasons, *RemarQ* was never a
-financial success so I decided to repackage it as an open source project
-and release it here.
+and sell it. Unfortunately, *RemarQ* was never a financial success 
+so I decided to repackage it as an open source project and release
+it here.
 
 *RemarQ* is a SharePoint farm solution, it’s not a SharePoint App. It
 does its work by integrating a tracking database with dynamically
@@ -61,9 +61,9 @@ open source:
 
 -   The technology works on both SharePoint 2013 and 2016, the
     development environment uses the SharePoint 2013 Office Developer
-    for Visual Studio 2013. The installation package deploys and
-    operates on SharePoint 2016 but the solution files are not yet
-    updated for Visual Studio 2015.
+    for Visual Studio 2013. I have **NOT** yet migrated the project to 
+    Visual Studio 2015. The installation package deploys and
+    operates on both SharePoint 2013 and 2016.  
 
 -   The project ships in US English, several alternate languages
     are available. The Balsamic Solutions culture manager can be used to
@@ -80,4 +80,33 @@ open source:
     installed may want to reuse the lists they have so the key has
     been included.
 
+-   The repository includes a Setup project that requires InstallShield
+    Express 2015 (the free version). The output from this project is the 
+    installer described in the administration guide. It will install
+    *RemarQ* and all supporting files on a SharePoint server.
 
+This repository has a number of directories including the base solution and some 
+supporting projects and files:
+-   *BalsamicSolutions.ReadUnreadSiteColumn* : A Visual Studio SharePoint
+    project that is the *RemarQ* solution
+-   *DebugConsole* : A Visual Studio project that can load test data and setup
+    different test and code evaluation scenairos
+-   *Documents* : Installation and administration documentation  
+-   *Images* : Graphics related to the project           
+-   *Other* :  Files needed by the instllation routines or related to the project. 
+-   *RemarQListProcessor* : A Visual Studio project that is a windows service that can
+    replace the SharePoint Jobs with an external processor
+-   *RemarQSetup* : An InstallShield Express setup project
+-   *BuildTools* : This project is included in the Setup solution so that the pre and
+    post build events can be leveraged to create the WSP file for the setup project
+    otherwise it provides no value. 
+-   *Translations* : Some language files
+-   *Utilities* : A Visual Studio project with a utilities commmand processor
+    for fixing common installation and configuration problems
+-   *WSP* : A working directory that contains the output WSP solution file. An MSI 
+    installer for the solution is also stored here. Due to the limitations of the
+    Express version of InstallShield the MSI file is in a subdirectory named
+    *Express\SingleImage\DiskImages\DISK1*. If you just want to use the technology
+    then this might be the best option for you
+-   *BalsamicSolutions.ReadUnreadSiteColumn.Setup.sln* : A Visual Studio solution file
+-   *BalsamicSolutions.ReadUnreadSiteColumn.sln* : A Visual Studio solution file
