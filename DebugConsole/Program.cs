@@ -1,8 +1,24 @@
 ﻿// -----------------------------------------------------------------------------
-//  Copyright 7/10/2016 (c) Balsamic Software, LLC. All rights reserved.
-//  THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF  ANY KIND, EITHER 
-//  EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR 
-//  A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+//This is free and unencumbered software released into the public domain.
+//Anyone is free to copy, modify, publish, use, compile, sell, or
+//distribute this software, either in source code form or as a compiled
+//binary, for any purpose, commercial or non-commercial, and by any
+//means.
+//In jurisdictions that recognize copyright laws, the author or authors
+//of this software dedicate any and all copyright interest in the
+//software to the public domain.We make this dedication for the benefit
+//of the public at large and to the detriment of our heirs and
+//successors.We intend this dedication to be an overt act of
+//relinquishment in perpetuity of all present and future rights to this
+//software under copyright law.
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+//EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+//MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+//IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+//OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+//ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+//OTHER DEALINGS IN THE SOFTWARE.
+//For more information, please refer to<http://unlicense.org>
 // ----------------------------------------------------------------------------- 
 
 using System;
@@ -48,41 +64,7 @@ namespace DebugConsole
 				//List<SPUser> allUsers = Testing.ActiveDirectory.EnsureAllusers("http://vm-bss-sfs/", "BALSAMIC");
 				// MarkupLibrary("http://vm-bss-sfs/","Documents two","BALSAMIC");
 
-				string siteUrl = "http://vm-bss-sfs/";
-				string listName = "Documents One";
-				using (SPSite currentSite = new SPSite(siteUrl))
-				{
-					using (SPWeb rootWeb = currentSite.RootWeb)
-					{
-						SPList docsOne = rootWeb.Lists.TryGetList(listName);
-						foreach (SPListItem listItem in docsOne.Items)
-						{
-							int storedVersion = listItem.Versions.Count;
-							var f = listItem.Versions[0].VersionId;
-							var y = listItem.Versions[0].Created;
-
-							RemarQuery ruQuery = new RemarQuery(listItem);
-							List<ReportData> versionIds = null;
-							//need to ignore the MSOCAF warning for abandoning readHistory
-							//its better than doing all of ths twice
-							List<System.Web.UI.WebControls.ListItem > fileVersions = new List<System.Web.UI.WebControls.ListItem>();
-							List<ReportData> readHistory = ruQuery.AllReaders(Constants.VersionFlagId , out versionIds);
-							if (readHistory.Count > 0 || versionIds.Count > 0)
-							{
-								foreach (ReportData historyId in versionIds)
-								{
-									string readOn = System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(historyId.ReadOn.ToString(listItem.ParentList.ParentWeb.Locale), false);
-									System.Web.UI.WebControls.ListItem addMe = new System.Web.UI.WebControls.ListItem(readOn, historyId.Version.ToString());
-									if (historyId.Version == 0)
-									{
-										addMe.Selected = true;
-									}
-									fileVersions.Insert(0, addMe);
-								}
-							}
-						}
-					}
-				}
+				 
 
 			}
 			catch (Exception badThing)
