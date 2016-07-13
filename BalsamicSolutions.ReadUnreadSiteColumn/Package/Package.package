@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="39cb067c-a0fd-4a79-922d-212cb9bad8ac" solutionId="39cb067c-a0fd-4a79-922d-212cb9bad8ac" resetWebServer="true" title="Read Unread Site Column" description="A site column that supports user specific read/unread marks for lists and document libraries" sharePointProductVersion="15.0" name="BalsamicSolutions.ReadUnreadSiteColumn" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="af653313-2e75-4630-9fb8-b2df3d2add52" />
+    <featureReference itemId="78e10507-4f77-4397-a190-59201c12d42c" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="63e41bc4-3a2f-4bf5-9137-32b0d4cbeb92" />
+    <projectItemReference itemId="6e128bb7-5101-48b3-bba1-234cb0ba7fa2" />
+    <projectItemReference itemId="67a53e46-d021-4463-b568-278755e442d2" />
+    <projectItemReference itemId="059323aa-d96e-428a-be41-68e91dec2788" />
+    <projectItemReference itemId="3a7a4c2f-046d-4d89-94e2-ccc99b101e62" />
+    <projectItemReference itemId="b3812164-604d-449c-9e21-10b1db426913" />
+  </projectItems>
+</package>

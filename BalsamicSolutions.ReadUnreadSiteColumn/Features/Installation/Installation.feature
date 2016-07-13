@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="54db882e-c2fb-432e-8cc8-adc6e1153486" alwaysForceInstall="true" creator="Robert Ginsburg (robert.ginsburg@balsamicsolutions.com)" description="Installation of the Balsamic Solutions Read/Unread technlogy" featureId="54db882e-c2fb-432e-8cc8-adc6e1153486" imageUrl="BalsamicSolutions.ReadUnreadSiteColumn/ReadUnreadLogoSmall.png" imageAltText="RemarQ" receiverAssembly="$SharePoint.Project.AssemblyFullName$" receiverClass="$SharePoint.Type.898d5e26-874c-4e61-801e-181793099f00.FullName$" scope="Farm" solutionId="00000000-0000-0000-0000-000000000000" title="Read/Unread installation" version="AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVpbGQJX1JldmlzaW9uAAAAAAgICAgEAAAAAAAAAAAAAAAAAAAACw==" autoActivateInCentralAdmin="true" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel">
+  <projectItems>
+    <projectItemReference itemId="c9ce49f9-316b-4092-9706-22a86813b9e7" />
+  </projectItems>
+</feature>

@@ -1,0 +1,166 @@
+﻿=============(alpha , no foldering) 
+
+Can SPUtility methods help us out
+	SPUtility.IsDesignTimeRender() to check on Designer client
+	SPContext.Current.ViewContext ?
+
+Add field rendering controls that mark the item read
+	Web/Standard
+	Mobile
+	Honor VisibleOnForm  
+ 
+JSLink
+	Figure out how to refresh the page when someone opens an item 
+	templateize the name in the JSLInk for the view field with the constant
+
+HttpModule
+	If we "mark an item as read" we need to unset the cacheing flag 
+		for the current page so that the page will be redrawn
+	The module is cycled alot, are we respponsible (grabe last error and page error and see)
+ 
+Central Config     
+	Add a Connection string builder/tester/DB creator [server, db name, credentials]
+	Add "clean up list" function (utilities menu)
+
+Open issues
+	Folder rendering 
+	Large lists ? (especially with foldering)
+
+When the column is added the user gets a warning about "incompatiable" with other clients
+
+Authentication
+	?How do we detect system users
+	?How do we detect anonymous (HttpContext.Current.User.Identity.IsAuthenticated )
+
+An Unread View processor
+	?button on form/header "Show Unread"
+	?Creates a client side view processor 	
+	?Creates a dynamic view processor (comparisoin of item id's)
+
+Clean up
+	constants
+	comments
+	use string extensions
+	class names
+	About dialog
+	Javascript ... clean testing
+		document.querySelector(".class-name>a").innerHTML = "..."; ?
+	Need a better way to check inbound URL's for validity
+		not just _/..
+	add string.trimto() for length control for sql variables
+
+
+Error conditions (TBD)
+	Bad connection string
+	Bad configuration
+	Bad list configuration
+	Bad event handler registration
+	Bad JsScript
+	SPDispose review
+	Error logging system using SPUtility.LogAppErrorResult
+
+Language templates
+	http://msdn.microsoft.com/en-us/library/vstudio/ee696750(v=vs.110).aspx
+	http://msdn.microsoft.com/en-us/library/vstudio/ee848294.aspx
+	http://msdn.microsoft.com/en-us/library/ms436075.aspx
+	Error messages
+	List configuration UI
+	Central configuration UI
+	Read Unread Context Menu
+	Image "alt" tags
+	Primary admin site does not get the resource file
+		Create an event receiver to put it there
+	Everything else done via standard resx file
+		deployed to app_globalresources, and picked up via  return HttpContext.GetGlobalResourceObject("wss", resourceToken, cultureInfo) as string;
+	Feature names are still not figured out
+	List admmin may need to redeploy context menu if language changes
+
+Delayed "edge case" testing
+	Very large lists
+		Foldering concerns
+		HttpModule concerns
+	Multiple views on same page
+		Same List
+		Different Lists
+	Open list with SharePoint designer
+	Open list from Excel/Access
+		Currently they get "raw" text, how do we keep them from writing text
+		(maybe an event handler)
+	multipe users ? (is spfield unique per user)
+	Adding column to web part displays on other lists?
+	When does RenderFieldValueAsJson get called ?
+	Can we make the field ReadOnly
+
+
+Tools for building and testing large volume updates	and queries
+Tools for licensing
+	Load license in global admin
+	"Free version" limits the number of lists	
+				   limits the number of items rendered
+Admin tool for "cleaning up" a list and its read/unread marks
+
+Sql injection review/cleanup
+	script injection review/cleanup
+
+Foldering
+	HashSet<struct (int,contenttype) > GetParentFolderHierarchy(..splistitem...) walks the tree and collects a list of items that are folders
+	HashSet<struct (int,contenttype) > GetMemberItems(..spfolder..) gets all direct decendents of a folder
+	HashSet<struct (int,contenttype) > GetPeerMemberItems(..spitem..) gets all (other items) in same folder as item 
+	MarkItemsRead(HashSet<struct (int,contenttype) >, userId);
+	MarkItemsUnreadRead(HashSet<struct (int,contenttype) >, userId);
+ 
+
+
+ function rectifyOfficeDocumentLinks()
+{
+     $("a").each(function(){
+                if (this.href.match(/.doc$/i) || this.href.match(/.docx$/i) || this.href.match(/.rtf$/i) || this.href.match(/.xls$/i) || this.href.match(/.xlsx$/i) || this.href.match(/.ppt$/i) || this.href.match(/.pptx$/i))
+                {
+                    if (this.href.indexOf("/_layouts/download.aspx?SourceUrl=") == -1)
+                    {
+                     this.href = _spPageContextInfo.siteServerRelativeUrl + "/_layouts/download.aspx?SourceUrl=" + this.href.replace("http://" + window.location.host,'');  
+                    }
+                }
+                });
+}
+<a class="ms-listlink ms-draggable" 
+  style="color: rgb(0, 0, 0);" 
+  onmousedown="return VerifyHref(this,event,'1','','')" 
+  onclick="return DispEx(this,event,'TRUE','FALSE','FALSE','','1','','','','','1','0','0','0x7fffffffffffffff')" 
+  href="/Docs 1/SPSF_Documentation.pdf" 
+  DragId="5">
+  SPSF_Documentation</a>
+ 
+ alt form ?
+ DispEx(this,event,'TRUE','FALSE','");
+
+
+function DispEx(ele, objEvent, fTransformServiceOn, fShouldTransformExtension,
+    fTransformHandleUrl, strHtmlTrProgId, iDefaultItemOpen, strProgId, strHtmlType, strServerFileRedirect,
+    strCheckoutUser, strCurrentUser, strRequireCheckout, strCheckedoutTolocal, strPermmask)
+
+function DispEx(ele, objEvent, fTransformServiceOn, fShouldTransformExtension, fTransformHandleUrl, strHtmlTrProgId, iDefaultItemOpen, strProgId, strHtmlType, strServerFileRedirect, strCheckoutUser, strCurrentUser, strRequireCheckout, strCheckedoutTolocal, strPermmask) {
+   ?? what is this ?
+    g_MDNav = (function(u) {
+        return u;
+    })();
+    CoreInvoke('_DispEx', ele, objEvent, fTransformServiceOn, fShouldTransformExtension, fTransformHandleUrl, strHtmlTrProgId, iDefaultItemOpen, strProgId, strHtmlType, strServerFileRedirect, strCheckoutUser, strCurrentUser, strRequireCheckout, strCheckedoutTolocal, strPermmask);
+    return g_MDNav;
+}
+
+
+    ele - [obj] the element
+    objEvent - [obj] the event object
+    fTransformServiceOn - [bool] (unknown functionality) defaults to True
+    fShouldTransformExtension - [bool] (unknown functionality) defaults to False
+    fTransformHandleUrl - [bool] (unknown functionality) defaults to False
+    strHtmlTrProgId - [string] name of the ActiveXControl to try to load defaults to SharePoint.OpenDocuments.3
+    iDefaultItemOpen - [int] indicator of default to Edit or Read defaults to 1
+    strProgId - [string] name of the ActiveX Control
+    strHtmlType [string] (unknown functionality) defaults to empty
+    strServerFileRedirect - [string] (unknown functionality)
+    strCheckoutUser [string] the ID of the user who has checked out the document
+    strCurrentUser - [string] the ID of the current user
+    strRequireCheckout - [string] indicator whether to force a checkout
+    strCheckedoutTolocal - [string] indicator of whether to use the Local Drafts folder
+    strPermmask - [string] permissions mask for the current user defaults to 0x7fffffffffffffff

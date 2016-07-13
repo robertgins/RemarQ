@@ -1,0 +1,230 @@
+﻿<Resources applicationname="BalsamicSolutions.RemarQ" tablename="RemarQ.Resources" culture="DE-DE" altculture="de">
+  <Resource Name="FarmSettingsAdvancedLabelSqlDatabaseName">Datenbankname</Resource>
+  <Resource Name="FieldDefaultFieldDescription">Gelesen und ungelesenes Element-Statusanzeige</Resource>
+  <Resource Name="PropEditReadUnreadPropertySectionDescription">Konfigurieren Sie den Umgang mit gelesen und  Ungelesen-Markierungen für diesen Listenelementtyp.  Wenn das Element durch eine Fettdruck Farbe hervorgehoben werden, wählen 'Ungelesene Kolonnen sind markiert'. Andernfalls
+    wählen Sie  Icons anzeigen für gelesen oder ungelesen Andere Optionen können im Dialogfeld Erweiterte Einstellungen verfügbar sein.
+  </Resource>
+  <Resource Name="FarmSettingsTitleInTitle">RemarQ Einstellungen</Resource>
+  <Resource Name="ItemContextMenuMarkUnread">Markieren ungelesen</Resource>
+  <Resource Name="ItemContextMenuRemarQReport">Leser-Bericht</Resource>
+  <Resource Name="FarmSettingsSqlConnectionStringDescription">Losung Datenbank-Einstellungen konfigurieren</Resource>
+  <Resource Name="FarmSettingsLicensingStatusTemplate">
+    System ist für {0} Server
+    lizenziert.  Lizenz gültig bis {1}.
+  </Resource>
+  <Resource Name="FarmSettingsKendoStylePathLabel">Stil</Resource>
+  <Resource Name="FarmSettingsRemoveFieldsLabelConfirmText">Sind sie sicher</Resource>
+  <Resource Name="ReportAccessDenied">Sie sind nicht berechtigt, diesen Bericht zugreifen.</Resource>
+  <Resource Name="FarmSettingsPasswordsDoNotMatch">Passworter sind nicht das Gleiche.</Resource>
+  <Resource Name="FarmSettingsLicensingNotLicensed">
+    System ist nicht
+    lizenziert
+  </Resource>
+  <Resource Name="FarmSettingsBtnLanguageLabel">Einstellungen für die Kultur</Resource>
+  <Resource Name="FarmSettingsRefreshIntervalDescription">
+    Konfigurieren Sie den Mindestwert für Auto Aktualisierungsintervalle
+    für die Liste, geben Sie eine 0 Deaktivieren dieser Funktion Farmweit.
+  </Resource>
+  <Resource Name="PropEditListMaintStarted">
+    Ein SharePoint-Zeitgeberauftrag diese Liste erneut initialisieren
+    hat in der Warteschlange
+  </Resource>
+  <Resource Name="RemarQBuyNow">Kauflizenz</Resource>
+  <Resource Name="FarmSettingsLicensingTrialSent">
+    Eine Testlizenz erhalten Sie unter der Adresse per Email werden
+    die von Ihnen bereitgestellten
+  </Resource>
+  <Resource Name="PropEditVersionFlags">Klar nur bei Version ändern</Resource>
+  <Resource Name="WarningImageTagAltText">Lizenzierungsfehler</Resource>
+  <Resource Name="FarmSettingsLicensingApplied">
+    Lizenz angewendet, ein Schema Update-Auftrag wurde begonnen.  Einige Ihrer Listen werden inkonsistente,
+    bis der Schema-Update-Auftrag abgeschlossen wurde.
+  </Resource>
+  <Resource Name="PropEditNoPermission">Die installierte Lizenz erlaubt keine Bearbeitung dieser Einstellungen</Resource>
+  <Resource Name="FarmSettingsMaintenanceResetLanguageDescription">Zurücksetzen der Sprachressourcen</Resource>
+  <Resource Name="PropEditListUtilitiesDescriptionLiteral">
+    Wenn die Indikatoren für die Liste gebrochen sind, konnen sie hier
+    uberpruft werden.  Neu initialisierung
+    wird die Liste aller Indikatoren fur alle Benutzer loschen. Überprüfen der
+    Liste behalten Geschichte.
+  </Resource>
+  <Resource Name="PropEditInitList">Liste neu initialisieren</Resource>
+  <Resource Name="REMARQ">RemarQ</Resource>
+  <Resource Name="FarmSettingsLargeListDescription">
+    Große SharePoint-Listen sind Listen Abfrage Throtteling,
+    unterliegen, wenn Sie möchten unterstützen umfangreiche Listen und wählen die
+    Option, die ihre Infrastracture am besten geeignet ist. "Default"
+    bedeutet, die SharePoint-Drosseln zu respektieren. "Elevate"
+    bedeutet, dass die Abfragen auf große Listen sollten Throttleing ignorieren.
+    "Disable" bedeutet, dass die Listeneinstellungen individuell
+    angepasst werden, werden um die Throttleing bei Bedarf zu deaktivieren
+  </Resource>
+  <Resource Name="FarmSettingsButtonUploadLicenseText">Bauernhof Lizenz laden</Resource>
+  <Resource Name="FarmSettingSqlSaveErrorTemplate">Fehler Testen der Einstellungen-{0}</Resource>
+  <Resource Name="FarmSettingsBtnLicensingLabel">Lizenzierung</Resource>
+  <Resource Name="FarmSettingsLargeListTitle">Große Listenmodus</Resource>
+  <Resource Name="BalsamicSolutionsQueueMonitorJobTitle">
+    Auftrag für den Monitor RemarQ
+    Liste-Initialisierung-Warteschlange
+  </Resource>
+  <Resource Name="FarmSettingsDescriptionLiteral">
+    RemarQ Speicher- und Laufzeit-Optionen konfigurieren und
+    Verwalten von Ressourceneinstellungen für diese farm
+  </Resource>
+  <Resource Name="FarmSettingsAdvancedLabelSqlPassword">Passwort</Resource>
+  <Resource Name="PropEditColumnDisplayColorText">Ungelesene Farbe</Resource>
+  <Resource Name="DailyMaintenanceJobTitle">RemarQ tägliche Wartungsauftrag</Resource>
+  <Resource Name="FarmSettingsBtnApplyLabel">Gelten</Resource>
+  <Resource Name="FarmSettingsMaintenanceTitle">Bauernhof-Wartung</Resource>
+  <Resource Name="PropEditChkShowInlineEditingToolsText">Zeigen Bearbeitungswerkzeuge im Kontextmenü</Resource>
+  <Resource Name="PropEditRadColumnDisplayIconicText">Zeige Symbole für gelesen oder ungelesen</Resource>
+  <Resource Name="FarmSettingsMaintenanceRemoveFieldsDescription">RemarQ entfernen Sie alles</Resource>
+  <Resource Name="FarmSettingsLabelLicenseCodeTextBoxLabel">
+    Geben Sie Ihren Lizenzcode oder Ihre e-Mail-Adresse für eine
+    Testlizenz
+  </Resource>
+  <Resource Name="ErrorImageTagAltText">Fehler</Resource>
+  <Resource Name="BalsamicSolutionsListInitializationJobTitle">RemarQ Liste Initialisierungsauftrag</Resource>
+  <Resource Name="UserAnonymous">Anonym</Resource>
+  <Resource Name="FarmSettingsDescription">
+    Konfigurieren von Serverfarm Verhalten für den Balsamic Solutions
+    RemarQ Websitekolonne
+  </Resource>
+  <Resource Name="ItemContextMenuMarkRead">Markieren gelesen</Resource>
+  <Resource Name="FarmSettingsLicensingError">
+    Konnte nicht mit den Lizenzierungsdienst kommunizieren oder
+    Lizenz ist ungültig
+  </Resource>
+  <Resource Name="PropEditRefreshIntervalDescription">Auto Refresh Intervall (Sekunden)</Resource>
+  <Resource Name="PropEditChkShowReportingMenuText">Reporting-Menü anzeigen</Resource>
+  <Resource Name="FarmSettingsKendoASPMVCPathLabel">Kendo MVC</Resource>
+  <Resource Name="ReportReadOnColumnTitle">Lesen Sie weiter</Resource>
+  <Resource Name="FarmSettingsChkDocumentTrackingLabel">Aktivieren Sie Dokument lesen tracking</Resource>
+  <Resource Name="PropEditCheckList">Check-Liste</Resource>
+  <Resource Name="FarmSettingsBtnInitLabel">Dienstprogramme</Resource>
+  <Resource Name="PropEditReadUnreadPropertySectionTitle">Read Mark Indikatoren</Resource>
+  <Resource Name="FarmSettingsButtonRedeemUploadText">Datei zu erlösen</Resource>
+  <Resource Name="BalsamicSolutionsLargeListInitializationJobTitle">RemarQ große Liste Initialisierung Job</Resource>
+  <Resource Name="RemarQReminderTitle">Erinnerung</Resource>
+  <Resource Name="BalsamicSolutionsRemoveAllFieldsJobTitle">RemarQ entfernen Sie alles</Resource>
+  <Resource Name="FarmSettingsTitleLiteral">Konfigurationseinstellungen</Resource>
+  <Resource Name="FarmSettingsRadioHashName">Sicheren Hash</Resource>
+  <Resource Name="FarmSettingsButtonDownloadLicenseRequestText">Download Lizenzanforderungsdatei</Resource>
+  <Resource Name="FarmSettingsResetJobs">Alle Wartungsarbeiten wurden neu initialisieren</Resource>
+  <Resource Name="FarmSettingsbtnRemoveAllFieldsStatus">
+    Ein Job, alle RemarQ Felder und Einstellungen zu entfernen hat
+    SharePoint in die Warteschlange gestellt wurde
+  </Resource>
+  <Resource Name="FarmSettingsTrackDocumentsDescription">
+    Normalerweise lesen die RemarQ tracking Systemtrigger Updates
+    nur, wenn ein Benutzer eine SharePoint-Formular liest. Für
+    Dokumentbibliotheken Dies ist die Dokument-Eigenschaften-Informationen,
+    einige Anwendungen (z.B. Excell, Word, etc.) lösen keine der Eigenschaft
+    Seite liest, wenn sie das Dokument herunterladen. Wenn Sie möchten, dass ein
+    Dokument als markiert zu lesen, wenn ein Benutzer das Dokument direkt
+    geöffnet oder lädt es, sollten dann Sie aktivieren, hier verfolgen.
+  </Resource>
+  <Resource Name="FarmSettingsKendoScriptPathLabel">Kendo</Resource>
+  <Resource Name="FarmSettingsAdvancedTitle">Erweiterte</Resource>
+  <Resource Name="RemarQAboutText">
+    Willkommen bei Balsamic Solutions SharePoint
+    Produktverbesserungen.   Diese
+    Erseiterungbietet so einzelnen Gelesen oder ungelesenen Indikatoren fur
+    Dokumentbibliotheken und SharePoint-Listen. 
+    Wir hoffen, dass Sie es mogen. Sie konnen detaillierte informationen
+    zu unserem Blog http://www.remarq.info. Wenn Sie irgendwelche Kommentare oder
+    Fragen haben, Email Sie an 
+    mailto:support@balsamicsolutions.com.
+  </Resource>
+  <Resource Name="LicenseReminderText">
+    Wir hoffen, dass unsere Losung gefallen.  . Wenn Sie es mochten, konnen Sie eine
+    Lizens auf unserer Kompanie-Website zu kaufen  http://www.remarq.info/, oder
+    Emailen Sie  uns an
+    sales@balsamicsolutions.com .
+  </Resource>
+  <Resource Name="FarmSettingsBtnMaintenanceLabel">Wartungsaufgaben</Resource>
+  <Resource Name="FieldInitializing">Initialisieren</Resource>
+  <Resource Name="FieldUnread">Ungelesene</Resource>
+  <Resource Name="FarmSettingsAdvancedDescription">
+    Erweiterte Konfigurationsoptionen für die gelesene ungelesene
+    Sub-Systeme
+  </Resource>
+  <Resource Name="FarmSettingsJQueryPathLabel">JQuery</Resource>
+  <Resource Name="FarmSettingsAdvancedRunMaintenanceNowTitle">Tägliche Wartung</Resource>
+  <Resource Name="ReportNameColumnTitle">Name</Resource>
+  <Resource Name="FarmSettingsLicensingDescription">Lizenzierung fűr dieses Feature basiert auf der Anzahl der front end Web server in der Serverfarm.   Wenn Ihr SharePoint Configuration Server hat Zugriff auf dash Internet kőnnen Sie aktualisieren Sie Ihre Lizenz dutch die Bereitstellung Ihrer Lizenz Code unten ein,  und klicken Sie auf "Ubernehmen".  Wenn Sie nicht eine Lizenz code haben under mőchten eine Testversion oder Kostenlosen Version,  geben Sie Ihre email Adresse,  und Sie eine Lizenz aussuchen Ihre Testlizenz wird Ihnen per e-mail zugesandt.   Wenn der Server nicht mit dem Internet verbunden ist műssen Sie eine Lizenz Datei herunterladen und per e-mail zu support@balsamicsolutions.com.  Sie erhalten dann eine Lizenzdatei per e-mail,  die kőnnen sie aktivieren durch das Hochladen der Datei und klicken Sie auf die Einlösen Datei. </Resource>
+  <Resource Name="FarmSettingsBtnAdvancedLabel">Erweiterte Einstellungen</Resource>
+  <Resource Name="PropEditListNotInitialized">Liste wurde nicht initialisiert</Resource>
+  <Resource Name="LoadingImageTagAltText">Initialisieren</Resource>
+  <Resource Name="PropEditOkDokey">Aktualisiert</Resource>
+  <Resource Name="FieldError">Fehler</Resource>
+  <Resource Name="FieldRead">Lesen</Resource>
+  <Resource Name="FarmSettingsKendoThemeLabel">Thema</Resource>
+  <Resource Name="FarmSettingsAdvancedLabelSqlServername">SQL Server-name</Resource>
+  <Resource Name="FarmSettingsAdvancedLabelSqlUserId">Benutzer-id</Resource>
+  <Resource Name="PropEditReadImageUrl">Bild-Url zu lessen</Resource>
+  <Resource Name="FarmSettingsbtnRunDailyNowStatus">Tägliche Wartung gestartet</Resource>
+  <Resource Name="FarmSettingsSqlConnectionStringTitle">RemarQ Speicher</Resource>
+  <Resource Name="FarmSettingsBtnLicensingDescription">Verwalten von Lizenzen Lösung</Resource>
+  <Resource Name="FarmSettingsSqlConnectionStringInstructions">
+    Die Lösung erfordert DbOwner Zugriff auf eine Sql-Datenbank zur
+    Speicherung der lesen Sie Indikatoren. Wenn Sie die integrierte Sicherheit
+    verwenden möchten, müssen dann alle SharePoint-Dienst Accouns DbOwner zu der
+    Lösungsdatenbank Berechtigung
+  </Resource>
+  <Resource Name="FarmSettingsNameModeDescription">
+    Verwenden Sie LoginName Formatierung für Active Directory
+    authentifiziert Systeme, verwenden Sie ClaimName für föderierte Systeme,
+    Secure Hash zu verwenden Sie, wenn Sie Benutzernamen in den
+    RemarQ-Datenbanken haben können. Achtung, wenn Sie das Format ändern,
+    verlieren Sie alle aktuellen lesen Sie Indikatoren
+  </Resource>
+  <Resource Name="UNKNOWN">UNBEKANNT</Resource>
+  <Resource Name="FarmSettingsBtnCancelLabel">Abbrechen</Resource>
+  <Resource Name="FarmSettingsBtnRemoveFieldsLabel">Kolonnen entfernen</Resource>
+  <Resource Name="FarmSettingsBtnAboutLabel">Über</Resource>
+  <Resource Name="FarmSettingsbtnRunDailyNowError">
+    Ein Fehler ist aufgetreten, den tägliche der Wartungsauftrag
+    gestartet
+  </Resource>
+  <Resource Name="PropEditUnreadImageUrl">Ungelesene Bild-url</Resource>
+  <Resource Name="FarmSettingsMaintenanceDescription">
+    Systemwartungsaufgaben umfassen die Möglichkeit, tägliche Wartung
+    jetzt planen oder entfernen Sie alle Instanzen dieser Funktion in
+    Vorbereitung zur Entfernung dieser Lösung
+  </Resource>
+  <Resource Name="FarmSettingsTitle">RemarQ Bauernhof Einstellungen</Resource>
+  <Resource Name="RemarQReportTitle">Leser-Bericht</Resource>
+  <Resource Name="FarmSettingsAdvancedRunMaintenanceNowDescription">Führen Sie jetzt den tägliche Wartung-Auftrag</Resource>
+  <Resource Name="ReportVersionColumnTitle">Ver</Resource>
+  <Resource Name="FarmSettingsAdvancedLabelSqlIntegratedSecurity">Integrierte Sicherheit</Resource>
+  <Resource Name="FarmSettingsLanguageReset">Sprachen wurden zurückgesetzt</Resource>
+  <Resource Name="FarmSettingsRadDisableLabel">Deaktivieren</Resource>
+  <Resource Name="RemarQAboutTitle">Über</Resource>
+  <Resource Name="FarmSettingsRadDefaultLabel">Standard</Resource>
+  <Resource Name="FarmSettingsRadElevateLabel">Elevate</Resource>
+  <Resource Name="FarmSettingsAdvancedLabelConfirmSqlPassword">Passwort bestätigen</Resource>
+  <Resource Name="FarmSettingsRadioLoginName">Login-Name</Resource>
+  <Resource Name="PropEditRadColumnDisplayBoldText">Ungelesene Kolonnen werden markiert</Resource>
+  <Resource Name="FarmSettingsAdvancedRunLicenseCheckDescription">Führen Sie einen Lizenzprüfung Job</Resource>
+  <Resource Name="FarmSettingsCDNDescription">
+    Wenn Sie eine zentrale CDN für JQuery und Kendo haben,
+    aktualisieren Sie diese Pfade hier.
+  </Resource>
+  <Resource Name="FarmSettingsRadioClaimName">Anspruchname</Resource>
+  <Resource Name="FarmSettingsButtonRedeemLicenseText">Online einlösen</Resource>
+  <Resource Name="FarmSettingsInvalidSqlConnection">Ungültige Sql-Verbindung</Resource>
+  <Resource Name="FarmSettingsBtnRunMaintenanceNow">Führen Sie nun</Resource>
+  <Resource Name="ConfigErrorImageTagAltText">Konfigurationsfehler</Resource>
+  <Resource Name="FarmSettingsAdvancedBtnTestSqlConnection">Testverbindung</Resource>
+  <Resource Name="FarmSettingsAdvancedResetJobs">Zurücksetzen von Wartungsaufträgen</Resource>
+  <Resource Name="INVALID">Ungültig</Resource>
+  <Resource Name="FarmSettingsBtnConnectionLabel">Speichereinstellungen</Resource>
+  <Resource Name="PropEditThreadDisplayColorText">Ungelesenen Thread Farbe</Resource>
+  <!--New-->
+  <Resource Name="FarmSettingsLicenseTypeLabel">Angefordert Lizenz-Typ?</Resource>
+  <Resource Name="FarmSettingsLicenseTypeFree">Postenlos</Resource>
+  <Resource Name="FarmSettingsLicenseTypeProfessional">Professional</Resource>
+  <Resource Name="FarmSettingsLicenseTypeEnterprise">Unternehmen</Resource>
+  <!--New-->
+</Resources>

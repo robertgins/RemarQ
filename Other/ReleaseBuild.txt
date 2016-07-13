@@ -1,0 +1,11 @@
+When generating a release you need to update the Assembly version information in several places
+	1. In the Version class update the build and redirect values  
+	2. In the Package Template XML update the redirect values 
+	3. In the Setup routing update the version release to match the major release number
+	4. If necessary update the version flags in the fldtypes_ReadUnreadField.xml file
+		    <!--<Field Name="FieldTypeClass">BalsamicSolutions.ReadUnreadSiteColumn.ReadUnreadField,$SharePoint.Project.AssemblyFullName$</Field>-->
+			<Field Name="FieldTypeClass">BalsamicSolutions.ReadUnreadSiteColumn.ReadUnreadField,BalsamicSolutions.ReadUnreadSiteColumn, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4000e3255b4ebc93</Field>
+	5. Verify with MSOCAF
+    
+and again a check in for msocaf
+

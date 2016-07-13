@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8151C497-EA34-481A-A5F9-46567B4E3CA2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BalsamicSolutions.ReadUnreadSiteColumn</RootNamespace>
+    <AssemblyName>BalsamicSolutions.ReadUnreadSiteColumn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <PreDeploymentCommand>net stop SPTimerV4</PreDeploymentCommand>
+    <PostDeploymentCommand>rem ..\Utilities\bin\x64\Debug\Utilities.exe /REGISTER
+net start SPTimerV4</PostDeploymentCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Other\BalsamicSolutions.SharePoint.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BalsamicSolutionsAppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugX|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugX\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugX|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DebugX\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ConsoleDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ConsoleDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ConsoleDebug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\ConsoleDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.ApplicationPages.Administration">
+      <HintPath>..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\CONFIG\ADMINBIN\Microsoft.SharePoint.ApplicationPages.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROLTEMPLATES\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFieldPropertyEditor.ascx.cs">
+      <DependentUpon>ReadUnreadFieldPropertyEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTROLTEMPLATES\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFieldPropertyEditor.ascx.designer.cs">
+      <DependentUpon>ReadUnreadFieldPropertyEditor.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Installation\Installation.EventReceiver.cs">
+      <DependentUpon>Installation.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SiteColumn\SiteColumn.EventReceiver.cs">
+      <DependentUpon>SiteColumn.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\ResourceManager.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\About.aspx.designer.cs">
+      <DependentUpon>About.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\LazyUpdate.aspx.cs">
+      <DependentUpon>LazyUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\LazyUpdate.aspx.designer.cs">
+      <DependentUpon>LazyUpdate.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditor.aspx.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditor.aspx.designer.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditor.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorAdvanced.aspx.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorAdvanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorAdvanced.aspx.designer.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorAdvanced.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorMaintenance.aspx.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorMaintenance.aspx.designer.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorMaintenance.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorConnection.aspx.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorConnection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorConnection.aspx.designer.cs">
+      <DependentUpon>ReadUnreadFarmSettingsEditorConnection.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\JSLink.aspx.cs">
+      <DependentUpon>JSLink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\JSLink.aspx.designer.cs">
+      <DependentUpon>JSLink.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadAdvancedSettings.aspx.cs">
+      <DependentUpon>ReadUnreadAdvancedSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadAdvancedSettings.aspx.designer.cs">
+      <DependentUpon>ReadUnreadAdvancedSettings.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadListUtilities.aspx.cs">
+      <DependentUpon>ReadUnreadListUtilities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadListUtilities.aspx.designer.cs">
+      <DependentUpon>ReadUnreadListUtilities.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadQuery.aspx.cs">
+      <DependentUpon>ReadUnreadQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadQuery.aspx.designer.cs">
+      <DependentUpon>ReadUnreadQuery.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReport.aspx.cs">
+      <DependentUpon>ReadUnreadReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReport.aspx.designer.cs">
+      <DependentUpon>ReadUnreadReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReportQuery.aspx.cs">
+      <DependentUpon>ReadUnreadReportQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReportQuery.aspx.designer.cs">
+      <DependentUpon>ReadUnreadReportQuery.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadUnreadMarks\AjaxResult.cs" />
+    <Compile Include="ReadUnreadMarks\ApiAccess.cs" />
+    <Compile Include="ReadUnreadMarks\ColumnRenderMode.cs" />
+    <Compile Include="ReadUnreadMarks\Constants.cs" />
+    <Compile Include="ReadUnreadMarks\DailyMaintenanceJob.cs" />
+    <Compile Include="ReadUnreadMarks\HierarchyItem.cs" />
+    <Compile Include="ReadUnreadMarks\SoapEnvelopeParser.cs" />
+    <Compile Include="ReadUnreadMarks\InitializationQueueMonitorJob.cs" />
+    <Compile Include="ReadUnreadMarks\IntExtensions.cs" />
+    <Compile Include="ReadUnreadMarks\LargeListInitializationJob.cs" />
+    <Compile Include="ReadUnreadMarks\LicenseModeType.cs" />
+    <Compile Include="ReadUnreadMarks\ListInitializationProcessor.cs" />
+    <Compile Include="ReadUnreadMarks\RemarQException.cs" />
+    <Compile Include="ReadUnreadMarks\SharePointListDictionary.cs" />
+    <Compile Include="ReadUnreadMarks\ListCommand.cs" />
+    <Compile Include="ReadUnreadMarks\ListInitializationJob.cs" />
+    <Compile Include="ReadUnreadMarks\ListConfiguration.cs" />
+    <Compile Include="ReadUnreadMarks\ListConfigurationCache.cs" />
+    <Compile Include="ReadUnreadMarks\NameModeType.cs" />
+    <Compile Include="ReadUnreadMarks\RangedReadMarksQuery.cs" />
+    <Compile Include="ReadUnreadMarks\FarmLicense.cs" />
+    <Compile Include="ReadUnreadMarks\FarmSettings.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadField.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadFieldControl.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadFieldValue.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadHttpModule.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadJsonValue.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadListItemEventReceiver.cs" />
+    <Compile Include="ReadUnreadMarks\ReadUnreadMobileFieldControl.cs" />
+    <Compile Include="ReadUnreadMarks\RemoveRemarQJob.cs" />
+    <Compile Include="ReadUnreadMarks\ReportData.cs" />
+    <Compile Include="ReadUnreadMarks\SharePointExtensions.cs" />
+    <Compile Include="ReadUnreadMarks\RemarQuery.cs" />
+    <Compile Include="ReadUnreadMarks\SharePointReadMarks.cs" />
+    <Compile Include="ReadUnreadMarks\SqlRemarQ.cs" />
+    <Compile Include="ReadUnreadMarks\StringExtensions.cs" />
+    <Compile Include="ReadUnreadMarks\RemarQLog.cs" />
+    <Compile Include="ReadUnreadMarks\Utilities.cs" />
+    <Compile Include="Versions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Installation\Resources.en-US.resx" />
+    <Content Include="Features\SiteColumn\Resources.en-US.resx" />
+    <Content Include="Features\Installation\Resources.fr.resx" />
+    <Content Include="Features\Installation\Resources.es.resx" />
+    <Content Include="Features\Installation\Resources.de.resx" />
+    <Content Include="Features\Installation\Resources.ja.resx" />
+    <Content Include="Features\SiteColumn\Resources.de.resx" />
+    <Content Include="Features\SiteColumn\Resources.fr.resx" />
+    <Content Include="Features\SiteColumn\Resources.es.resx" />
+    <Content Include="Features\SiteColumn\Resources.ja.resx" />
+    <Content Include="Features\Installation\Resources.zh-Hans.resx" />
+    <Content Include="Features\SiteColumn\Resources.zh-Hans.resx" />
+    <EmbeddedResource Include="Framework\CreateQueueTableTemplate.sql" />
+    <Content Include="BalsamicSolutionsAppIcon.ico" />
+    <EmbeddedResource Include="Framework\SpanishResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\GermanResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\ChineseResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\FrenchResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\JapaneseResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\BalsamicSolutionsAppIcon.ico" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\BalsamicSolutionsFavIcon.ico" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\BalsamicSolutionsIcon.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\AccessDenied.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\BalsamicSolutions.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\Blank32.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscError32.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadLogo16.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\Remarq-Logo.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\StatusCheck.png" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReportQuery.aspx" />
+    <EmbeddedResource Include="ReadUnreadMarks\JSLinkTemplateAnonymous.js" />
+    <Content Include="XSL\RemarQThread.xsl" />
+    <Content Include="CONTROLTEMPLATES\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFieldPropertyEditor.ascx" />
+    <Content Include="DeploySupportingElements\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\SiteColumn\SiteColumn.Template.xml">
+      <DependentUpon>SiteColumn.feature</DependentUpon>
+    </Content>
+    <EmbeddedResource Include="Framework\DefaultResources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadUnreadMarks\JSLinkDiscussionBoardThreadedTemplate.js" />
+    <EmbeddedResource Include="Framework\JSLinkDiscussionBoardSubjectTemplate.js" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscBlank.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscCheckOne.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscError.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscErrorGray.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscExclamation.GIF" />
+    <Content Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditor.aspx" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscLoading.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscUncheckOne.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscWarning.gif" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\About.aspx" />
+    <Content Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorAdvanced.aspx" />
+    <Content Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorMaintenance.aspx" />
+    <Content Include="ADMIN\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadFarmSettingsEditorConnection.aspx" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\JSLink.aspx" />
+    <Content Include="Features\Installation\Resources.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\SiteColumn\Resources.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="ReadUnreadMarks\JSLinkTemplate.js" />
+    <None Include="ADMIN\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{67a53e46-d021-4463-b568-278755e442d2}</SharePointProjectItemId>
+    </None>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b3812164-604d-449c-9e21-10b1db426913}</SharePointProjectItemId>
+    </None>
+    <None Include="DeploySupportingElements\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c9ce49f9-316b-4092-9706-22a86813b9e7}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SiteColumn\SiteColumn.feature">
+      <FeatureId>{78e10507-4f77-4397-a190-59201c12d42c}</FeatureId>
+    </None>
+    <None Include="Features\Installation\Installation.feature">
+      <FeatureId>{af653313-2e75-4630-9fb8-b2df3d2add52}</FeatureId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{63e41bc4-3a2f-4bf5-9137-32b0d4cbeb92}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6e128bb7-5101-48b3-bba1-234cb0ba7fa2}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{39cb067c-a0fd-4a79-922d-212cb9bad8ac}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReadUnreadMarkSiteColumn\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9e9f7564-5df3-4c87-b282-4cb5fcc72d3c}</SharePointProjectItemId>
+    </None>
+    <None Include="XML\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{059323aa-d96e-428a-be41-68e91dec2788}</SharePointProjectItemId>
+    </None>
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscCheckAll.GIF" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscUncheckAll.GIF" />
+    <None Include="XSL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3a7a4c2f-046d-4d89-94e2-ccc99b101e62}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Features\Installation\Installation.Template.xml">
+      <DependentUpon>Installation.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu16.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu16_alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu16_alt_2.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu36_Alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu_alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscFolderMenu_alt_2.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscItemMenu.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscItemMenu16.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscItemMenu16_Alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscItemMenu36_Alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscItemMenu_Alt.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscReadMark.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\clscUnreadMark.gif" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadLogoSmall.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadMenuLogo.png" />
+    <Content Include="Images\BalsamicSolutions.ReadUnreadSiteColumn\UnderConstruction.png" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\LazyUpdate.aspx" />
+    <EmbeddedResource Include="ReadUnreadMarks\CreateReadUnreadTableTemplate.sql" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadAdvancedSettings.aspx" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadListUtilities.aspx" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadQuery.aspx" />
+    <Content Include="Layouts\BalsamicSolutions.ReadUnreadSiteColumn\ReadUnreadReport.aspx" />
+    <Content Include="ReadUnreadMarkSiteColumn\Elements.xml" />
+    <EmbeddedResource Include="ReadUnreadMarks\CreateConfigTableTemplate.sql" />
+    <EmbeddedResource Include="ReadUnreadMarks\JSLinkDiscussionBoardFlatTemplate.js" />
+    <EmbeddedResource Include="ReadUnreadMarks\CreateVersionsTableTemplate.sql" />
+    <EmbeddedResource Include="Framework\CreateResourceTableTemplate.sql" />
+    <EmbeddedResource Include="ReadUnreadMarks\CreateReadUnreadIndicesTemplate.sql" />
+    <EmbeddedResource Include="ReadUnreadMarks\CreateReadUnreadIndicesWithVersionTemplate.sql" />
+    <EmbeddedResource Include="ReadUnreadMarks\DropReadUnreadIndicesTemplate.sql" />
+    <EmbeddedResource Include="ReadUnreadMarks\JSLinkDiscussionBoardSubjectTemplate.js" />
+    <Content Include="XML\fldtypes_ReadUnreadField.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <DeploymentConfigurations>
+          <DeploymentConfiguration Name="Nothing">
+            <DeploymentSteps>
+            </DeploymentSteps>
+            <RetractionSteps>
+            </RetractionSteps>
+          </DeploymentConfiguration>
+        </DeploymentConfigurations>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

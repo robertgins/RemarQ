@@ -1,0 +1,69 @@
+If you are single server debugging then this is a good prebuild event for the site column project
+net stop SPTimerV4
+net stop SPAdminV4
+net stop SPTraceV4
+net stop w3svc
+net stop iisadmin
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\gacutil.exe" /u "$(TargetPath)"
+
+followed by this as a post build event
+
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools\x64\gacutil.exe" /i "$(TargetPath)"
+net start iisadmin
+net start w3svc
+net start SPTraceV4
+net start SPAdminV4
+net start SPTimerV4
+
+Future features
+ 
+	:Unread item view
+	:Provisioning status panel in central admin
+	:Export a report, User double click information in report
+	:Make "large job size" configurable
+	:List wide reports (per user)
+	:Read/Workflow integration for API
+	:Multi server list initializtion jobs
+	:RegisterModuleInit work instead of Disabling MinimalDownloadStrategy
+	:Add auto password changer for sql user
+	:Add roll up web part with discovery/search connectors
+	:Separate db's per site collection
+	:Search result integration
+	:Add personalized color support
+	:Add other library support 
+		pictures first
+		News feeds
+		contacts
+		Link Lists
+	:Add "Hot topics" or Suggestions technology as well (how does this align/compete with SharePoint server "recomendations"?
+	:Include support for reading lists, timed participation (as a workflow) and reading reports
+	:Break config/resource/data/queues into separate connection strings
+	:Add auto update of all farm OWSTimer.exe.config files, query remote registry 
+			RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, <machine name>)
+			Look for Location key in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Shared Tools\Web Server Extensions\15.0
+			Copy files to that location or edit locally with job
+	:On admin advanced settings "save" if changing the webconfig setting, then add "long running wait"
+	:Assembly linking can be more generic <bindingRedirect oldVersion="0.0.0.0-65535.65535.65535.65535" newVersion="4.1.0.0" />
+
+
+
+ 
+NOTE :
+	Do we need a synchronous Javascript function for AnchorTag chasing, the page processing in
+	JsLink.aspx is mostly asynchronous, except for document display without the HttpModule, 
+	when that mode is active, the marking routine is synchronous so that the "click" wont
+	fall through to the anchor tag before the mark happens
+
+NOTE:
+	The read unread field generates a JSLink url if the library is a supported type, for discussion 
+	boards the JSLink is attached to the AllItems and Flat views. 
+	The Threaded view uses thread.xsl and is an xsl view not a JSLInk view, we change that to our
+	copy of Thread.xsl and add the JsLink infor into the template xls paramater reference is available
+	at  http://msdn.microsoft.com/en-us/library/office/ff806158(v=office.14).aspx
+	
+NOTE:
+	According to online docs a SQL MERGE would have been a better logical choice for our Stored Procedure
+	for Mark Read, however the quote is "Because the MERGE statement performs a full table scan of both the source and target tables"
+	because of that I am very suspicious of performance
+ 
+

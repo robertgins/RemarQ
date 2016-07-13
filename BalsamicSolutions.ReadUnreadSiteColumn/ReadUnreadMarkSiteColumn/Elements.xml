@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{c8ad55be-f10f-4559-86e7-a8e04b8132d6}"
+       Name="RemarQ"
+       DisplayName="$Resources:DisplayName"
+       Type="ReadUnreadField"
+       Required="FALSE"
+       Group="Balsamic Solutions">
+  </Field>
+</Elements>

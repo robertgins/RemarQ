@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UNKNOWN" xml:space="preserve">
+    <value>UNKNOWN</value>
+  </data>
+  <data name="INVALID" xml:space="preserve">
+    <value>INVALID</value>
+  </data>
+  <data name="PropEditColumnDisplayColorText" xml:space="preserve">
+    <value>Unread color</value>
+  </data>
+  <data name="PropEditChkShowReportingMenuText" xml:space="preserve">
+    <value>Show Reporting Menu</value>
+  </data>
+  <data name="PropEditListNotInitialized" xml:space="preserve">
+    <value>List has not been initialized</value>
+  </data>
+  <data name="PropEditChkShowInlineEditingToolsText" xml:space="preserve">
+    <value>Show editing tools on context menu</value>
+  </data>
+  <data name="PropEditRadColumnDisplayBoldText" xml:space="preserve">
+    <value>Unread columns are highlighted</value>
+  </data>
+  <data name="PropEditRadColumnDisplayIconicText" xml:space="preserve">
+    <value>Show icons for read or unread</value>
+  </data>
+  <data name="PropEditVersionFlags" xml:space="preserve">
+    <value>Clear only on version change</value>
+  </data>
+  <data name="PropEditReadUnreadPropertySectionDescription" xml:space="preserve">
+    <value>Configure the handling of read and unread marks for this list item type, if you want the item to be  highlighted by a bold color, select 'Unread columns are highlighted' . Otherwise select 'Show icons for read or unread' other options may be available in Advanced Settings.</value>
+  </data>
+  <data name="PropEditNoPermission" xml:space="preserve">
+    <value>The installed license does not permit editing of these settings</value>
+  </data>
+  <data name="PropEditReadUnreadPropertySectionTitle" xml:space="preserve">
+    <value>Read mark indicators</value>
+  </data>
+  <data name="PropEditThreadDisplayColorText" xml:space="preserve">
+    <value>Unread thread color</value>
+  </data>
+  <data name="PropEditAdvancedEditReadUnreadPropertySectionDescription" xml:space="preserve">
+    <value>Configure the highlighted color, the images used in iconic mode and enable a context menu item that allows the user to mark items read without reading them. If you only want to reset the read marks when a version is checked in, then select that option, otherwise marks will be reset whenever the item is updated</value>
+  </data>
+  <data name="PropEditOkDokey" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="PropEditUnreadImageUrl" xml:space="preserve">
+    <value>Unread image url</value>
+  </data>
+  <data name="PropEditRefreshIntervalDescription" xml:space="preserve">
+    <value>Auto refresh interval (seconds)</value>
+  </data>
+  <data name="PropEditCheckList" xml:space="preserve">
+    <value>Check list</value>
+  </data>
+  <data name="PropEditInitList" xml:space="preserve">
+    <value>Re-initialize list</value>
+  </data>
+  <data name="PropEditListMaintStarted" xml:space="preserve">
+    <value>A SharePoint Timer Job to reinitialize this list has been queued</value>
+  </data>
+  <data name="PropEditReadImageUrl" xml:space="preserve">
+    <value>Read image url</value>
+  </data>
+  <data name="PropEditListUtilitiesDescriptionLiteral" xml:space="preserve">
+    <value>If the indicators for the list become disconected, you can validate them here, Re-initializing the list will reprocess all indicators for all users, Checking the list will reapply views and menu controls </value>
+  </data>
+  <data name="FarmSettingsAdvancedBtnTestSqlConnection" xml:space="preserve">
+    <value>Test connection</value>
+  </data>
+  <data name="FarmSettingsAdvancedDescription" xml:space="preserve">
+    <value>Advanced configuration options for the read unread sub systems</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelConfirmSqlPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelSqlDatabaseName" xml:space="preserve">
+    <value>Database name</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelSqlIntegratedSecurity" xml:space="preserve">
+    <value>Integrated security</value>
+  </data>
+  <data name="FarmSettingsBtnInitLabel" xml:space="preserve">
+    <value>Utilities</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelSqlPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelSqlServername" xml:space="preserve">
+    <value>Sql server name</value>
+  </data>
+  <data name="FarmSettingsAdvancedLabelSqlUserId" xml:space="preserve">
+    <value>User id</value>
+  </data>
+  <data name="FarmSettingsRefreshIntervalDescription" xml:space="preserve">
+    <value>Configure the minimum value for auto refresh intervals for a list, enter a 0 to disable this feature farm wide</value>
+  </data>
+  <data name="FarmSettingsLanguageReset" xml:space="preserve">
+    <value>Languages have been reset</value>
+  </data>
+  <data name="FarmSettingsMaintenanceResetLanguageDescription" xml:space="preserve">
+    <value>Reset language resources</value>
+  </data>
+  <data name="FarmSettingsAdvancedResetJobs" xml:space="preserve">
+    <value>Reset maintenance jobs</value>
+  </data>
+  <data name="FarmSettingsAdvancedRunMaintenanceNowDescription" xml:space="preserve">
+    <value>Run the daily maintenance job now</value>
+  </data>
+  <data name="FarmSettingsAdvancedRunLicenseCheckDescription" xml:space="preserve">
+    <value>Run a license check job job now</value>
+  </data>
+  <data name="FarmSettingsRunLicenseCheckStatus" xml:space="preserve">
+    <value>A license check job has been initiated</value>
+  </data>
+  <data name="FarmSettingsAdvancedRunMaintenanceNowTitle" xml:space="preserve">
+    <value>Daily maintenance</value>
+  </data>
+  <data name="FarmSettingsAdvancedTitle" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="FarmSettingsBtnAboutLabel" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="FarmSettingsBtnAdvancedLabel" xml:space="preserve">
+    <value>Advanced Settings</value>
+  </data>
+  <data name="FarmSettingsBtnApplyLabel" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="FarmSettingsBtnCancelLabel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FarmSettingsBtnConnectionLabel" xml:space="preserve">
+    <value>Storage settings</value>
+  </data>
+  <data name="FarmSettingsBtnLicensingDescription" xml:space="preserve">
+    <value>Manage solution licensing</value>
+  </data>
+  <data name="FarmSettingsBtnLicensingLabel" xml:space="preserve">
+    <value>Licensing</value>
+  </data>
+  <data name="FarmSettingsBtnMaintenanceLabel" xml:space="preserve">
+    <value>Maintenance tasks</value>
+  </data>
+  <data name="FarmSettingsMaintenanceRemoveFieldsDescription" xml:space="preserve">
+    <value>RemarQ Remove Everything</value>
+  </data>
+  <data name="FarmSettingsbtnRemoveAllFieldsStatus" xml:space="preserve">
+    <value>A job to remove all RemarQ fields and settings has been queued to SharePoint</value>
+  </data>
+  <data name="FarmSettingsBtnRemoveFieldsLabel" xml:space="preserve">
+    <value>Remove columns</value>
+  </data>
+  <data name="FarmSettingsbtnRunDailyNowStatus" xml:space="preserve">
+    <value>Daily maintenance started</value>
+  </data>
+  <data name="FarmSettingsBtnRunMaintenanceNow" xml:space="preserve">
+    <value>Run now</value>
+  </data>
+  <data name="FarmSettingsButtonDownloadLicenseRequestText" xml:space="preserve">
+    <value>Download license request file</value>
+  </data>
+  <data name="FarmSettingsButtonRedeemLicenseText" xml:space="preserve">
+    <value>Redeem online</value>
+  </data>
+  <data name="FarmSettingsButtonRedeemUploadText" xml:space="preserve">
+    <value>Redeem file</value>
+  </data>
+  <data name="FarmSettingsButtonUploadLicenseText" xml:space="preserve">
+    <value>Upload farm license</value>
+  </data>
+  <data name="FarmSettingsChkDocumentTrackingLabel" xml:space="preserve">
+    <value>Enable document read tracking</value>
+  </data>
+  <data name="FarmSettingsDescription" xml:space="preserve">
+    <value>Configure farm behaviour for the Balsamic Solutions RemarQ Site Column</value>
+  </data>
+  <data name="FarmSettingsInvalidSqlConnection" xml:space="preserve">
+    <value>Invalid Sql connection </value>
+  </data>
+  <data name="FarmSettingsLabelLicenseCodeTextBoxLabel" xml:space="preserve">
+    <value>Enter your license code or your email address for a trial license</value>
+  </data>
+  <data name="FarmSettingsLargeListTitle" xml:space="preserve">
+    <value>Large List Mode</value>
+  </data>
+  <data name="FarmSettingsLargeListDescription" xml:space="preserve">
+    <value>Large SharePoint lists are lists are subject to query throtteling, if you want to support large lists then select the option that is best suited for your infrastructure. \"Default\" means to respect the SharePoint throttles. \"Elevate\" means that queries on large lists should ignore throttleing. \"Disable\" means that the list settings will be individually adjusted to  disable throttleing when necessary</value>
+  </data>
+  <data name="FarmSettingsLicensingApplied" xml:space="preserve">
+    <value>License applied, a schema update job has been started some of your lists will be inconsistant until the schema update job completes</value>
+  </data>
+  <data name="FarmSettingsLicensingDescription" xml:space="preserve">
+    <value>Licensing for this feature is based on the number of front end web servers in your server farm. If your SharePoint configuration server has access to the internet you may update your license by providing your license code below and clicking "apply". If you dont have a license code and want to start a trial , enter your email address instead of a license code and your trial license will be emailed to you. If your server is not connected to the internet you must download a license request file and email it to support@balsamicsolutions.com. You will receive a license file by email which you can activate by clicking on the "upload" license button.</value>
+  </data>
+  <data name="FarmSettingsLicensingError" xml:space="preserve">
+    <value>Could not communicate with the licensing service or license is invalid</value>
+  </data>
+  <data name="FarmSettingsLicensingNotLicensed" xml:space="preserve">
+    <value>Your system is not currently licensed</value>
+  </data>
+  <data name="FarmSettingsLicensingStatusTemplate" xml:space="preserve">
+    <value>Your system is currently licensed for {0} server(s). Your license expires on {1}.</value>
+  </data>
+  <data name="FarmSettingsLicensingTrialSent" xml:space="preserve">
+    <value>A  trial license will be emailed to you at the address you provided</value>
+  </data>
+  <data name="FarmSettingsMaintenanceDescription" xml:space="preserve">
+    <value>System maintenance tasks include the ability to schedule daily maintenance now or to remove all of the instances of this feature in preparation for removal of this solution</value>
+  </data>
+  <data name="FarmSettingsMaintenanceTitle" xml:space="preserve">
+    <value>Farm Maintenance</value>
+  </data>
+  <data name="FarmSettingsPasswordsDoNotMatch" xml:space="preserve">
+    <value>Passwords do not match</value>
+  </data>
+  <data name="FarmSettingSqlSaveErrorTemplate" xml:space="preserve">
+    <value>An error occured testing the settings {0}</value>
+  </data>
+  <data name="FarmSettingsRadDefaultLabel" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="FarmSettingsRadDisableLabel" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="FarmSettingsRadElevateLabel" xml:space="preserve">
+    <value>Elevate</value>
+  </data>
+  <data name="FarmSettingsRemoveFieldsLabelConfirmText" xml:space="preserve">
+    <value>Are you sure</value>
+  </data>
+  <data name="FarmSettingsResetJobs" xml:space="preserve">
+    <value>All maintenance jobs have been re-initialized</value>
+  </data>
+  <data name="FarmSettingsSqlConnectionStringDescription" xml:space="preserve">
+    <value>Configure solution database settings</value>
+  </data>
+  <data name="FarmSettingsSqlConnectionStringInstructions" xml:space="preserve">
+    <value>The solution requires dbOwner access to a Sql database for storing the read indicators. If you want to use Integrated Security, then all SharePoint service accounts must have dbOwner permission to the solution database</value>
+  </data>
+  <data name="FarmSettingsSqlConnectionStringTitle" xml:space="preserve">
+    <value>RemarQ storage</value>
+  </data>
+  <data name="FarmSettingsTitle" xml:space="preserve">
+    <value>RemarQ farm settings</value>
+  </data>
+  <data name="FarmSettingsTitleInTitle" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="FarmSettingsTrackDocumentsDescription" xml:space="preserve">
+    <value>Normally the RemarQ tracking system triggers read updates only when a user reads a SharePoint form. For document libraries this is the document properties information, some applications (e.g. Excel, Word, etc.) do not trigger the property page reads when they download the document. If you want a document marked as read when a user opens the document directly or downloads it, then you should enable tracking here.</value>
+  </data>
+  <data name="FarmSettingsCDNDescription" xml:space="preserve">
+    <value>If you have a central CDN for JQuery and Kendo update those paths here</value>
+  </data>
+  <data name="FarmSettingsNameModeDescription" xml:space="preserve">
+    <value>Use LoginName formatting for Active Directory authenticated systems, use ClaimName for federated systems , use Secure Hash if you cannot have user names in the RemarQ databases. WARNING, if you change the name format you will lose any current read indicators</value>
+  </data>
+  <data name="FarmSettingsTitleLiteral" xml:space="preserve">
+    <value> Configuration settings</value>
+  </data>
+  <data name="FarmSettingsRadioClaimName" xml:space="preserve">
+    <value>Claim Name</value>
+  </data>
+  <data name="FarmSettingsRadioLoginName" xml:space="preserve">
+    <value>Login Name</value>
+  </data>
+  <data name="FarmSettingsRadioHashName" xml:space="preserve">
+    <value>Secure Hash</value>
+  </data>
+  <data name="FarmSettingsDescriptionLiteral" xml:space="preserve">
+    <value>Configure RemarQ storage and runtime options and manage resource settings for this farm</value>
+  </data>
+  <data name="FarmSettingsbtnRunDailyNowError" xml:space="preserve">
+    <value>A error occurred starting the daily maintenance job</value>
+  </data>
+  <data name="FarmSettingsJQueryPathLabel" xml:space="preserve">
+    <value>JQuery</value>
+  </data>
+  <data name="FarmSettingsKendoScriptPathLabel" xml:space="preserve">
+    <value>Kendo</value>
+  </data>
+  <data name="FarmSettingsKendoStylePathLabel" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="FarmSettingsKendoASPMVCPathLabel" xml:space="preserve">
+    <value>Kendo MVC</value>
+  </data>
+  <data name="FarmSettingsKendoThemeLabel" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="FarmSettingsBtnLanguageLabel" xml:space="preserve">
+    <value>Culture Settings</value>
+  </data>
+  <data name="ReportNameColumnTitle" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ReportVersionColumnTitle" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="ReportReadOnColumnTitle" xml:space="preserve">
+    <value>Read On</value>
+  </data>
+  <data name="ReportAccessDenied" xml:space="preserve">
+    <value>You do not have permission to access this report</value>
+  </data>
+  <data name="FieldError" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="FieldInitializing" xml:space="preserve">
+    <value>initializing</value>
+  </data>
+  <data name="FieldRead" xml:space="preserve">
+    <value>read</value>
+  </data>
+  <data name="FieldUnread" xml:space="preserve">
+    <value>unread</value>
+  </data>
+  <data name="FieldDefaultFieldDescription" xml:space="preserve">
+    <value>Read and unread item status indicator</value>
+  </data>
+  <data name="ItemContextMenuMarkRead" xml:space="preserve">
+    <value>Mark read</value>
+  </data>
+  <data name="ItemContextMenuMarkUnread" xml:space="preserve">
+    <value>Mark unread</value>
+  </data>
+  <data name="ItemContextMenuRemarQReport" xml:space="preserve">
+    <value>Readers report</value>
+  </data>
+  <data name="UserAnonymous" xml:space="preserve">
+    <value>anonymous</value>
+  </data>
+  <data name="BalsamicSolutionsRemoveAllFieldsJobTitle" xml:space="preserve">
+    <value>RemarQ Remove Everything</value>
+  </data>
+  <data name="BalsamicSolutionsListInitializationJobTitle" xml:space="preserve">
+    <value>RemarQ List Initialization Job</value>
+  </data>
+  <data name="BalsamicSolutionsLargeListInitializationJobTitle" xml:space="preserve">
+    <value>RemarQ Large List Initialization Job</value>
+  </data>
+  <data name="BalsamicSolutionsQueueMonitorJobTitle" xml:space="preserve">
+    <value>RemarQ List Initialization Queue Monitor Job</value>
+  </data>
+  <data name="DailyMaintenanceJobTitle" xml:space="preserve">
+    <value>RemarQ Daily Maintenance Job</value>
+  </data>
+  <data name="LoadingImageTagAltText" xml:space="preserve">
+    <value>Initializing</value>
+  </data>
+  <data name="ErrorImageTagAltText" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ConfigErrorImageTagAltText" xml:space="preserve">
+    <value>Configuration error</value>
+  </data>
+  <data name="WarningImageTagAltText" xml:space="preserve">
+    <value>Licensing error</value>
+  </data>
+  <data name="RemarQReportTitle" xml:space="preserve">
+    <value>Readers Report</value>
+  </data>
+  <data name="RemarQBuyNow" xml:space="preserve">
+    <value>Purchase license</value>
+  </data>
+  <data name="RemarQReminderTitle" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="LicenseReminderText" xml:space="preserve">
+    <value>We hope you like our SharePoint solution. If you enjoy using it, you can purchase a license at our company web site http://www.remarq.info/, or email us at  sales@balsamicsolutions.com .</value>
+  </data>
+  <data name="RemarQAboutText" xml:space="preserve">
+    <value>Welcome to Balsamic Solutions SharePoint product enhancements. This SharePoint enhancement provides individual read/unread indicators for document libraries and SharePoint lists. We hope you enjoy using it. You can find detailed information on our web site http://www.balsamicsolutions.com/ or at the product blog http://www.remarq.info .If you have any comments or questions you can email us at support@balsamicsolutions.com or post your questions on the.</value>
+  </data>
+  <data name="RemarQAboutTitle" xml:space="preserve">
+    <value>About</value>
+  </data>
+</root>

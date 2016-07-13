@@ -1,0 +1,2 @@
+﻿<%@ Assembly Name="$SharePoint.Project.AssemblyFullName$" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReadUnreadQuery.aspx.cs" Inherits="BalsamicSolutions.ReadUnreadSiteColumn.Layouts.BalsamicSolutions.ReadUnreadSiteColumn.ReadUnreadQuery"%>

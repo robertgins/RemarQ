@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup
+    Id="REMARQ"
+    Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+    Title="$Resources:Title"
+    Sequence="200"
+    RequiredAdmin="Delegated"
+    Description="$Resources:Description"
+    ImageUrl="~/_layouts/15/images/BalsamicSolutions.ReadUnreadSiteColumn/ReadUnreadLogoSmall.png">
+  </CustomActionGroup>
+  <CustomAction
+    Id="REMARQ_1"
+    GroupId="REMARQ"
+    Location="Microsoft.SharePoint.Administration.GeneralApplicationSettings"
+    Title="$Resources:Description"
+    Sequence="201">
+    <UrlAction Url="/_admin/BalsamicSolutions.ReadUnreadSiteColumn/ReadUnreadFarmSettingsEditor.aspx" />
+  </CustomAction>
+</Elements>

@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalsamicSolutions.ReadUnreadSiteColumn", "BalsamicSolutions.ReadUnreadSiteColumn\BalsamicSolutions.ReadUnreadSiteColumn.csproj", "{8151C497-EA34-481A-A5F9-46567B4E3CA2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015} = {FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}
+	EndProjectSection
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "RemarQSetup", "RemarQSetup\RemarQSetup.isproj", "{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA} = {94095A6E-B4E5-41AE-9526-4B77B64CD5CA}
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316} = {B3174170-40BF-4DA1-B52B-A8E3FF516316}
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2} = {8151C497-EA34-481A-A5F9-46567B4E3CA2}
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015} = {FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{412ECED3-4A69-441D-84C3-2350F2D1041E}"
+	ProjectSection(SolutionItems) = preProject
+		Other\AddSolution.ps1 = Other\AddSolution.ps1
+		Other\makemsocaf.cmd = Other\makemsocaf.cmd
+		Other\MakeWsp.cmd = Other\MakeWsp.cmd
+		Other\Notes.txt = Other\Notes.txt
+		Other\PurgeAllSPCacheFiles.cmd = Other\PurgeAllSPCacheFiles.cmd
+		Other\PurgeLocalSPCacheFiles.cmd = Other\PurgeLocalSPCacheFiles.cmd
+		Other\StsAdmUpgradeSolution.cmd = Other\StsAdmUpgradeSolution.cmd
+		Other\UpdateSolution.ps1 = Other\UpdateSolution.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015} = {FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemarQListProcessor", "RemarQListProcessor\RemarQListProcessor.csproj", "{B3174170-40BF-4DA1-B52B-A8E3FF516316}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015} = {FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildTools", "BuildTools\BuildTools.csproj", "{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|x64.Build.0 = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Release|x64.ActiveCfg = Release|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Release|x64.Build.0 = Release|Any CPU
+		{8151C497-EA34-481A-A5F9-46567B4E3CA2}.Release|x64.Deploy.0 = Release|Any CPU
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Debug|Any CPU.ActiveCfg = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Debug|Any CPU.Build.0 = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Debug|x64.ActiveCfg = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Debug|x64.Build.0 = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Release|Any CPU.ActiveCfg = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Release|Any CPU.Build.0 = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Release|x64.ActiveCfg = SingleImage
+		{2FCA409A-D526-4CB8-8F86-7805B8DC8D8E}.Release|x64.Build.0 = SingleImage
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Debug|Any CPU.Build.0 = Debug|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Debug|x64.ActiveCfg = Debug|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Debug|x64.Build.0 = Debug|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Release|Any CPU.ActiveCfg = Release|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Release|Any CPU.Build.0 = Release|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Release|x64.ActiveCfg = Release|x64
+		{94095A6E-B4E5-41AE-9526-4B77B64CD5CA}.Release|x64.Build.0 = Release|x64
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3174170-40BF-4DA1-B52B-A8E3FF516316}.Release|x64.ActiveCfg = Release|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD3E2B2-793E-4F4D-B8C1-E113B5E4F015}.Release|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

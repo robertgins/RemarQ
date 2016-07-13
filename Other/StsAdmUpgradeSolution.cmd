@@ -1,0 +1,2 @@
+"%CommonProgramFiles%\microsoft shared\Web Server Extensions\15\bin\stsadm.exe" -o upgradesolution -name BalsamicSolutions.ReadUnreadSiteColumn.wsp -filename BalsamicSolutions.ReadUnreadSiteColumn.wsp -immediate -allowGacDeployment
+pause

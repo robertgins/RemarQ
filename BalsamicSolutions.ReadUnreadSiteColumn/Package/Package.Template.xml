@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Assemblies>
+    <Assembly Location="BalsamicSolutions.ReadUnreadSiteColumn.dll" DeploymentTarget="GlobalAssemblyCache" >
+      <BindingRedirects>
+        <BindingRedirect OldVersion="1.0.0.0-1.9.9.9" />
+      </BindingRedirects>
+    </Assembly>
+  </Assemblies>
+</Solution>

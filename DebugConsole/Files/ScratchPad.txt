@@ -1,0 +1,282 @@
+﻿Data Source=V-NEXT-SQL;Initial Catalog=BalsamicSolutions.ReadUnreadMarks;User Id=sa;Password=Password!
+Data Source=V-NEXT-SQL;Initial Catalog=BalsamicSolutions.ReadUnreadMarks; Integrated Security=SSPI;
+
+http://msdn.microsoft.com/en-us/library/office/jj220061.aspx
+app global named GlobalSiteResources
+<asp:Label ID="lblNumberingTitle" runat="server" Text="<%$Resources:GlobalSiteResources, AutoNameTitle %>"
+
+var cells = table.getElementsByTagName("td"); 
+for (var i = 0; i < cells.length; i++) { 
+    var status = cells[i].getAttribute("data-status"); 
+    if ( status == "open" ) { 
+        // grab the data 
+    }
+}
+
+
+// xsl to dump all attributes of a field into a table
+<table>
+	<xsl:for-each select="@*">
+	<tr>
+		<td>
+			<xsl:value-of select="name()"/>
+		</td>
+		<td>==</td>
+		<td>
+			<xsl:value-of select="."/>
+		</td>
+	</tr>
+	</xsl:for-each>
+</table>
+
+Display pattern CAML for detecting the read mark ?
+<IfSubString>
+  <Expr1>
+    <HTML><![CDATA[.]]></HTML>
+    <UserID AllowAnonymous = "FALSE"/>
+    <HTML><![CDATA[.]]></HTML>
+  </Expr1>
+  <Expr2>
+    <LookupColumn Name="Test" />
+  </Expr2>
+  <Then>
+    Read
+  </Then>
+  <Else>
+    Unread
+  </Else>
+</IfSubString>
+
+xsl for detecting read mark
+  <xsl:template name="FieldRef_Read_x002f_Unread_body" ddwrt:dvt_mode="body" match="FieldRef[@ID='63844040-69cf-429e-9f49-a4c49ad309fd']" mode="Computed_body">
+    <xsl:param name="thisNode" select="."/>
+    <xsl:choose>
+      <xsl:when test="contains($thisNode/@Read_x0020_Marks, $ReadMark)">
+        Read
+      </xsl:when>
+      <xsl:otherwise>
+        Unread
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+Computed field definition that we can trap in XSL
+ <Field ID="{63844040-69cf-429e-9f49-a4c49ad309fd}"
+       Type="Computed"
+       ReadOnly="TRUE"
+       DisplayName="Read/Unread"
+       Name="Read_x002f_Unread"
+       StaticName="Read_x002f_Unread"
+       BaseType = "Text"
+       AllowDeletion ="TRUE"
+       EnableLookup ="TRUE"
+       Filterable ="TRUE"
+        RenderXMLUsingPattern="TRUE" 
+       AuthoringInfo="(for filtering on your read and unread items)"
+       SourceID="http://schemas.microsoft.com/sharepoint/v3"  >
+  <FieldRefs>
+    <FieldRef Name="Read_x00200_Marks" />
+  </FieldRefs>
+  <DisplayPattern>
+  </DisplayPattern>
+</Field>
+
+xsl to catch the field 
+
+  <xsl:template name="FieldRef_Read_x002f_Unread_body" ddwrt:dvt_mode="body" match="FieldRef[@ID='63844040-69cf-429e-9f49-a4c49ad309fd']" mode="Computed_body">
+    <xsl:param name="thisNode" select="."/>
+    <!--HACK this is hard coded because the CAML FieldRef and DisplayPattern of computed fields
+    does not seem to be honered in SharePoint Foundation 2010 Beta2-->
+    <xsl:choose>
+      <xsl:when test="contains($thisNode/@Read_x0020_Marks, $ReadMark)">
+        Read
+      </xsl:when>
+      <xsl:otherwise>
+        Unread
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  
+ 
+ var unreadImage_LISTID_Url = "_UNREADIMAGEURL_";
+var readImage_LISTID_Url = "_READIMAGEURL_";
+var errorImage_LISTID_Url = "_ERRORIMAGEURL_";
+var colRenderMode_LISTID_ = "_COLRENDERMODE_";
+var colRenderColor_LISTID_ = "_COLRENDERCOLOR_";
+var ruServiceUrl_LISTID_ = "_RUSERVICEURL_";
+var ruVarPrefix_LISTID_ = "rum__LISTID__";
+var ruListId_LISTID_ = "_LISTID_";
+var ruFieldGuid_LISTID_ = "_FIELDGUID_";
+
+var ruReadItemsArray_LISTID_ = [];
+
+function readUnread_LISTID_PreRender(renderCtx) {
+ 
+
+    //We neeed all these null checks because some
+    //of the rendering modes dont actually provide 
+    //field schema (e.g. GettingStartedWebpart)
+    if (null != renderCtx && null != renderCtx.ListSchema && null != renderCtx.ListSchema.Field && null != renderCtx.ListSchema.Field.length) {
+        //Clean up the header (we dont want one)
+        var fieldCount = renderCtx.ListSchema.Field.length;
+        for (var fieldIdx = 0; fieldIdx < fieldCount; fieldIdx++) {
+            if (renderCtx.ListSchema.Field[fieldIdx].ID == ruFieldGuid_LISTID_) {
+                renderCtx.ListSchema.Field[fieldIdx].DisplayName = "";
+                break;
+            }
+        }
+    }
+}
+
+function readUnread_LISTID_OnPostRender(renderCtx) {
+    //some of the code here is overly complex, this is because our
+    //support script may not be ready yet, if we try to wait on it
+    //then the page rendering order is fubar so we take some added
+    //complexity here for markup of the read/unread indicators
+    //we only need to do it if the UI is BoldDisplay because
+    //in icon mode the initial state is emitted from the field
+   
+
+    if (colRenderMode_LISTID_ == "2") {
+        var listTable = null;
+        if (renderCtx.listBaseType == 1) {
+            //its a document library, and there is no guarantee that
+            //the table name is unique, they all could be named onetidDoclibViewTbl0
+            //but the xml information tag used by the web part framework should be
+            //unless the same list is on the same page with the same view more than 
+            // once in which case we only update the first table we find ,
+            //yes this is ugly but its the only way to get more than one table
+            var viewText = "&view=" + renderCtx.view.split("-").join("%2d").replace("{", "%7B").replace("}", "%7D");
+            viewText = viewText.toLowerCase();
+            var allTables = document.getElementsByTagName("table");
+            var tblCount = allTables.length;
+            for (var tblIdx = 0; tblIdx < tblCount; tblIdx++) {
+                var webQuerySourceHRef = allTables[tblIdx].getAttribute("o:webquerysourcehref");
+                if (null != webQuerySourceHRef && "" != webQuerySourceHRef) {
+                    webQuerySourceHRef = webQuerySourceHRef.toLowerCase();
+                    var posViewText = webQuerySourceHRef.indexOf(viewText, 0);
+                    if (posViewText > -1) {
+                        listTable = allTables[tblIdx];
+                        break;
+                    }
+                }
+            }
+        }
+        else {
+            if (null != renderCtx.listName && null != renderCtx.view) {
+                var tableId = renderCtx.listName + "-" + renderCtx.view;
+                listTable = document.getElementById(tableId);
+            }
+        }
+        if (null != listTable) {
+            var rowCount = renderCtx.ListData.Row.length;
+            for (var rowIdx = 0; rowIdx < rowCount; rowIdx++) {
+                var divName = ruVarPrefix_LISTID_ + renderCtx.ListData.Row[rowIdx].ID;
+                var rumDiv = document.getElementById(divName);
+                if (null != rumDiv) {
+                    var tblRow = rumDiv.parentElement;
+                    while (null != tblRow && tblRow.tagName != "TR" && tblRow.tagName != "tr") {
+                        tblRow = tblRow.parentElement;
+                    }
+                    if (null != tblRow) {
+
+                        var cellCount = tblRow.cells.length;
+                        var rumValue = rumDiv.getAttribute("isUnread");
+                        if (rumValue == "0") {
+                            tblRow.style.fontWeight = "bolder";
+                            if ("" != colRenderColor_LISTID_) {
+                                for (var cellIdx = 0; cellIdx < cellCount; cellIdx++) {
+                                    var rowCell = tblRow.cells[cellIdx];
+                                    readUnread_LISTID_SetUnReadColor(rowCell);
+                                }
+                            }
+                        }
+                        else {
+                            tblRow.style.fontWeight = 'normal';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+function readUnread_LISTID_SetUnReadColor(htmlElem) {
+    htmlElem.style.color = colRenderColor_LISTID_;
+    var childCount = htmlElem.childNodes.length;
+    for (var childIdx = 0; childIdx < childCount; childIdx++) {
+        var childElem = htmlElem.childNodes[childIdx];
+        if (null != childElem.attributes) {
+            childElem.style.color = colRenderColor_LISTID_;
+            readUnread_LISTID_SetUnReadColor(childElem);
+        }
+    }
+}
+
+function readUnread_LISTID_RenderField(renderCtx) {
+ 
+    //the fields GetFieldValueAsHtml gives us our Html ready to display so in
+    //iconic mode just return the provided tag without modification
+    //but in bold display mode we need to preserve all the unread items. 
+    //The tag template is  "<div id='{0}' isUnread='{1}' >{2}</div>";
+    var currentValue = "";
+    if (null != renderCtx && null != renderCtx.CurrentItem && null != renderCtx.CurrentItem.ReadUnreadMarks) {
+        currentValue = renderCtx.CurrentItem.ReadUnreadMarks;
+        if (colRenderMode_LISTID_ == "2") {
+            var divValues = currentValue.split("'");
+            if (divValues.length == 5) {
+                if (divValues[3] == '0') {
+                    ruReadItemsArray_LISTID_.push(divValues[1]);
+                }
+            }
+        }
+    }
+    return currentValue;
+}
+
+
+function readUnread_LISTID_PrepMenuVars() {
+    g_ReadUnreadMenuListTarget = ruListId_LISTID_;
+    g_ReadUnreadColumnRenderMode = colRenderMode_LISTID_;
+    g_ReadUnreadUnreadHtmlColor = colRenderColor_LISTID_;
+    g_ReadUnreadUnreadImageUrl = unreadImage_LISTID_Url;
+    g_ReadUnreadReadImageUrl = readImage_LISTID_Url;
+    g_ReadUnreadErrorImageUrl = errorImage_LISTID_Url;
+    var posProto = ruServiceUrl_LISTID_.indexOf("://");
+    if (posProto == 4 || posProto == 5) {
+        g_ReadUnreadMarkingServiceUrl = ruServiceUrl_LISTID_;
+    }
+    else{
+        g_ReadUnreadMarkingServiceUrl = _spPageContextInfo.webAbsoluteUrl + ruServiceUrl_LISTID_;
+    }
+}
+
+
+
+(function () {
+
+    
+    if (typeof SPClientTemplates === "undefined") return;
+
+    var overrideCtx_LISTID_ = {};
+    overrideCtx_LISTID_.Templates = {};
+    //overrideCtx_LISTID_.Templates.Footer = "<div id='footPlaceHolder_LISTID_'></div>";
+    //if ("_VISIBLEONFORM_" == "true") {
+    //}
+    //else {
+    //}
+    overrideCtx_LISTID_.OnPreRender = readUnread_LISTID_PreRender;
+    overrideCtx_LISTID_.OnPostRender = readUnread_LISTID_OnPostRender;
+    overrideCtx_LISTID_.Templates.Fields = {
+        "ReadUnreadMarks": {
+            "View": readUnread_LISTID_RenderField
+        }
+    };
+
+    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(overrideCtx_LISTID_);
+ 
+})();
+
+
+

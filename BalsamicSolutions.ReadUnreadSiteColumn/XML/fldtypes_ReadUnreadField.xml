@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">ReadUnreadField</Field>
+    <Field Name="TypeDisplayName">Read or unread indicator</Field>
+    <Field Name="ParentType">Note</Field>
+    <Field Name="TypeShortDescription">Read and unread marks for SharePoint list items</Field>
+    <Field Name="FieldTypeClass">BalsamicSolutions.ReadUnreadSiteColumn.ReadUnreadField,BalsamicSolutions.ReadUnreadSiteColumn, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4000e3255b4ebc93</Field>
+    <Field Name="FieldEditorUserControl">/_controltemplates/15/BalsamicSolutions.ReadUnreadSiteColumn/ReadUnreadFieldPropertyEditor.ascx</Field>
+    <Field Name="ID">{C1F6E461-F17A-4E13-B1E3-71841F7B0672}</Field>
+    <Field Name="DisplaySize">5</Field>
+    <Field Name="Sortable">FALSE</Field>
+    <Field Name="Filterable">FALSE</Field>
+    <Field Name="UserCreatable">FALSE</Field>
+    <Field Name="Hidden">TRUE</Field>
+    <Field Name="ShowInListCreate">FALSE</Field>
+    <Field Name="ShowInSurveyCreate">FALSE</Field>
+    <Field Name="ShowInDocumentLibraryCreate">FALSE</Field>
+    <Field Name="ShowInColumnTemplateCreate">FALSE</Field>
+    <Field Name="JSLink">/_layouts/15/BalsamicSolutions.ReadUnreadSiteColumn/ReadUnreadJSLink.js</Field>
+  </FieldType>
+ </FieldTypes>
+
