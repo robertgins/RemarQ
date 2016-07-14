@@ -34,7 +34,6 @@ using System.Web;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml;
 using Microsoft.SharePoint;
-using Microsoft.SharePoint.Security;
 using Microsoft.SharePoint.WebControls;
 
 ///ignore ASP.NET warning for SharePoint mobile field control

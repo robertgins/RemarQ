@@ -38,7 +38,6 @@ using System.Web.UI;
 using System.Xml;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
-using Microsoft.SharePoint.Security;
 using Microsoft.SharePoint.Utilities;
 
 namespace BalsamicSolutions.ReadUnreadSiteColumn
